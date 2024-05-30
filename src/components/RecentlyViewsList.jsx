@@ -46,6 +46,11 @@ const StyledRecentlyViewsList = styled.ul`
   column-gap: 1rem;
   margin-top: 4rem;
   margin-bottom: 3rem;
+
+  /* BELOW 1200 PIXELS (landscape Tablets) */
+  @media (max-width: 75em) {
+    overflow-x: scroll;
+  }
 `;
 
 function RecentlyViewsList() {

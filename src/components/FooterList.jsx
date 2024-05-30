@@ -3,7 +3,19 @@ import styled from "styled-components";
 const StyledFilterList = styled.ul`
   display: grid;
   grid-template-columns: repeat(${(props) => props.gridColumns}, 1fr);
+  align-items: start;
+  justify-items: start;
   column-gap: 5rem;
+
+  /* BELOW 704 PIXELS (Small Tablets) */
+  @media (max-width: 44em) {
+    column-gap: 8rem;
+  }
+
+  /* BELOW 544 PIXELS (Phones) */
+  @media (max-width: 34em) {
+    column-gap: 4rem;
+  }
 `;
 
 const FooterItem = styled.a`

@@ -26,6 +26,7 @@ const GlobalStyles = createGlobalStyle`
   
 
   --padding-section : 15rem;
+  --padding-section-sm : 5rem;
 }
 
 * {
@@ -37,6 +38,18 @@ const GlobalStyles = createGlobalStyle`
 html{
   //make 1rem = 10px
   font-size: 62.5%;
+
+  /* BELOW 1200 PIXELS (landscape Tablets) */
+  @media (max-width: 75em){
+    /* 8px / 16px =  50%*/
+    font-size: 50%;
+  }
+
+  /* BELOW 960 PIXELS (Tablets) */
+  @media (max-width: 60em) {
+    /* 7px / 16px =  43.75%*/
+    font-size: 43.75%;
+  }
 }
 
 body {
@@ -44,6 +57,13 @@ body {
   background-color: var(--color-grey-light);
   margin: 4rem 4rem 10rem 4rem;
   font-size: 1.5rem;
+
+   /* BELOW 1200 PIXELS (landscape Tablets) */
+   @media (max-width: 75em){
+   margin: 0;
+  }
+
+   
 }
 
 button {

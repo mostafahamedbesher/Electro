@@ -11,6 +11,8 @@ import Products from "./components/product/Products";
 import RecentlyViewed from "./components/RecentlyViewed";
 import GlobalStyles from "./styles/GlobalStyles";
 import styled from "styled-components";
+import { useState } from "react";
+import Overlay from "./components/Overlay";
 
 const StyledApp = styled.div`
   font-size: 24px;
@@ -20,13 +22,26 @@ const StyledApp = styled.div`
 `;
 
 function App() {
+  // state for opening mobile menu
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
+
+  function openMenu() {
+    setIsOpenMenu(true);
+  }
+
+  function closeMenu() {
+    setIsOpenMenu(false);
+  }
+
   return (
     <>
       <GlobalStyles />
       <StyledApp>
+        <Overlay isOpenMenu={isOpenMenu} closeMenu={closeMenu} />
+
         <Info />
-        <Header />
-        <Hero />
+        <Header openMenu={openMenu} />
+        <Hero isOpenMenu={isOpenMenu} />
 
         <OffersList>
           <OffersItem
@@ -78,7 +93,7 @@ function App() {
             duration: 5000,
           },
           style: {
-            fontSize: "16px",
+            fontSize: "13px",
             maxWidth: "500",
             padding: "16px 24px",
             backgroundColor: "var(--color-zinc-100)",

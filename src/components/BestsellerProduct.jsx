@@ -18,7 +18,7 @@ const StyledBestsellerProduct = styled.div`
   display: grid;
   grid-template-columns: 1.5fr 2fr;
   align-items: center;
-  justify-items: center;
+  justify-items: start;
   column-gap: 1rem;
   padding: 1rem;
   transition: all 0.2s;
@@ -45,6 +45,17 @@ const ImgBox = styled.div`
     width: 2rem;
     color: var(--color-grey-dark);
   }
+
+  /* BELOW 544 PIXELS (Phones) */
+  /* @media (max-width: 34em) {
+    justify-content: flex-start;
+  } */
+`;
+
+const ContentBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 `;
 
 function BestsellerProduct({ product, offerPrice = "" }) {
@@ -75,7 +86,7 @@ function BestsellerProduct({ product, offerPrice = "" }) {
         {isHovered && <HiMiniChevronRight />}
       </ImgBox>
 
-      <div>
+      <ContentBox>
         <div>
           <ProductCateogeryText>{category}</ProductCateogeryText>
           <ProductName>{name}</ProductName>
@@ -107,7 +118,7 @@ function BestsellerProduct({ product, offerPrice = "" }) {
             </div>
           </ProductFooter>
         </div>
-      </div>
+      </ContentBox>
     </StyledBestsellerProduct>
   );
 }

@@ -37,7 +37,7 @@ const ProductsData = [
 ];
 
 const StyledAllProductsContainer = styled.main`
-  margin: 0 15rem;
+  margin: 0 var(--padding-section);
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   /* align-items: start; */
@@ -45,6 +45,16 @@ const StyledAllProductsContainer = styled.main`
   row-gap: 1rem;
   border-radius: 5px;
   padding-bottom: 4rem;
+
+  /* BELOW 1200 PIXELS (landscape Tablets) */
+  @media (max-width: 75em) {
+    margin: 0 5rem;
+  }
+
+  /* BELOW 704 PIXELS (Small Tablets) */
+  @media (max-width: 44em) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const Column = styled.div`
@@ -53,11 +63,22 @@ const Column = styled.div`
   grid-template-rows: 1fr 1fr;
   row-gap: 1rem;
   height: 100%;
+
+  /* BELOW 704 PIXELS (Small Tablets) */
+  @media (max-width: 44em) {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 const FilterBox = styled.div`
   padding: 0 var(--padding-section);
   margin-bottom: 3rem;
+
+  /* BELOW 1200 PIXELS (landscape Tablets) */
+  @media (max-width: 75em) {
+    padding: 0 var(--padding-section-sm);
+  }
 `;
 
 function AllProductsContainer() {

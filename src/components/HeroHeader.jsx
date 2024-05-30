@@ -10,6 +10,16 @@ const StyledHeroHeader = styled.header`
   & p {
     font-size: 1.4rem;
     color: var(--color-zinc-700);
+
+    /* BELOW 704 PIXELS (Small Tablets) */
+    @media (max-width: 44em) {
+      font-size: 1.6rem;
+    }
+  }
+
+  /* BELOW 544 PIXELS (Phones) */
+  @media (max-width: 34em) {
+    display: none;
   }
 `;
 

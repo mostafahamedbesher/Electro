@@ -12,13 +12,22 @@ const StyledInput = styled.input`
   &:focus {
     outline: 2px solid var(--color-yellow);
   }
+
+  /* BELOW 704 PIXELS (Small Tablets) */
+  @media (max-width: 44em) {
+    border-radius: 0;
+    padding: 2rem 3.2rem;
+    font-size: 1.8rem;
+    border: none;
+  }
 `;
 
-const InputIconBox = styled.div`
+const InputIconBox = styled.button`
   position: absolute;
   top: 0;
   right: 0;
   height: 100%;
+  border: none;
 
   background-color: var(--color-yellow);
   /* padding: 1.4rem 2.8rem; */
@@ -34,22 +43,45 @@ const InputIconBox = styled.div`
     width: 2.2rem;
     height: 2.2rem;
     color: var(--color-grey-dark);
+
+    /* BELOW 704 PIXELS (Small Tablets) */
+    @media (max-width: 44em) {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+  /* BELOW 704 PIXELS (Small Tablets) */
+  @media (max-width: 44em) {
+    background-color: transparent;
   }
 `;
 
-const InputBox = styled.div`
+const StyledInputSearch = styled.div`
   position: relative;
   flex-grow: 1;
+
+  /* BELOW 704 PIXELS (Small Tablets) */
+  @media (max-width: 44em) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    width: 100%;
+    box-shadow: 2rem 2rem 5rem rgba(0, 0, 0, 0.1);
+
+    display: ${(props) => !props.isOpenSearch && "none"};
+  }
 `;
 
-function InputSearch() {
+function InputSearch({ isOpenSearch }) {
   return (
-    <InputBox>
+    <StyledInputSearch isOpenSearch={isOpenSearch}>
       <StyledInput type="text" placeholder="Search for products" />
       <InputIconBox>
         <HiOutlineMagnifyingGlass />
       </InputIconBox>
-    </InputBox>
+    </StyledInputSearch>
   );
 }
 

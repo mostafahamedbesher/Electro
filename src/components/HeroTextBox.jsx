@@ -10,6 +10,21 @@ const StyledHeroTextBox = styled.div`
   &p {
     font-size: 1.5rem;
     color: var(--color-grey-dark);
+
+    /* BELOW 544 PIXELS (Phones) */
+    @media (max-width: 34em) {
+      font-size: 1.3rem;
+    }
+  }
+
+  /* BELOW 704 PIXELS (Small Tablets) */
+  @media (max-width: 44em) {
+    padding-left: 1rem;
+  }
+
+  /* BELOW 544 PIXELS (Phones) */
+  @media (max-width: 34em) {
+    padding-top: 1rem;
   }
 `;
 
@@ -18,6 +33,16 @@ const H2 = styled.h2`
   font-weight: 300;
   text-transform: uppercase;
   margin-bottom: 1.2rem;
+
+  /* BELOW 960 PIXELS (Tablets) */
+  @media (max-width: 60em) {
+    font-size: 4.5rem;
+  }
+
+  /* BELOW 544 PIXELS (Phones) */
+  @media (max-width: 34em) {
+    font-size: 3rem;
+  }
 `;
 
 const H3 = styled.h3`
@@ -25,12 +50,23 @@ const H3 = styled.h3`
   font-weight: 900;
   text-transform: uppercase;
   margin-bottom: 4rem;
+
+  /* BELOW 544 PIXELS (Phones) */
+  @media (max-width: 34em) {
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+  }
 `;
 
 const PriceBox = styled.div`
   font-size: 1.5rem;
   color: var(--color-grey-dark);
   margin-bottom: 3rem;
+
+  /* BELOW 704 PIXELS (Small Tablets) */
+  @media (max-width: 44em) {
+    font-size: 1.8rem;
+  }
 `;
 
 const Price = styled.p`
@@ -56,6 +92,16 @@ const Price = styled.p`
     right: -0.9rem;
     font-size: 2.1rem;
   }
+
+  /* BELOW 704 PIXELS (Small Tablets) */
+  @media (max-width: 44em) {
+    font-size: 5.4rem;
+  }
+
+  /* BELOW 544 PIXELS (Phones) */
+  @media (max-width: 34em) {
+    font-size: 3.4rem;
+  }
 `;
 
 const Button = styled.button`
@@ -67,6 +113,17 @@ const Button = styled.button`
   border: 1px solid var(--color-yellow);
   border-radius: 9px;
   margin-bottom: 5rem;
+
+  /* BELOW 704 PIXELS (Small Tablets) */
+  @media (max-width: 44em) {
+    font-size: 1.8rem;
+    padding: 1.2rem 4.6rem;
+  }
+
+  /* BELOW 544 PIXELS (Phones) */
+  @media (max-width: 34em) {
+    margin-bottom: 3rem;
+  }
 `;
 
 function HeroTextBox() {

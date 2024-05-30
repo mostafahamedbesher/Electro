@@ -7,6 +7,11 @@ const StyledSlider = styled.div`
   align-items: center;
   gap: 1.5rem;
   justify-content: ${(props) => props.horizontalAlign};
+
+  /* BELOW 704 PIXELS (Small Tablets) */
+  @media (max-width: 44em) {
+    gap: 3rem;
+  }
 `;
 
 function Slider({ dotsNum, horizontalAlign = "flex-start" }) {

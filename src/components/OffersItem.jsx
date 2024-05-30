@@ -9,10 +9,20 @@ const StyledOffersItem = styled.li`
   padding: 3rem 0.5rem;
   border-radius: 4px;
   cursor: pointer;
+
+  /* BELOW 704 PIXELS (Small Tablets) */
+  @media (max-width: 44em) {
+    padding: 2rem 0.5rem;
+  }
 `;
 
 const ImageBox = styled.div`
-  width: 100%;
+  width: 85%;
+
+  /* BELOW 544 PIXELS (Phones) */
+  @media (max-width: 34em) {
+    width: 75%;
+  }
 `;
 
 const Image = styled.img`
@@ -26,6 +36,21 @@ const TextBox = styled.div`
     font-size: 2.3rem;
     margin-bottom: 1.6rem;
     font-weight: 300;
+
+    /* BELOW 960 PIXELS (Tablets) */
+    @media (max-width: 60em) {
+      font-size: 2rem;
+    }
+
+    /* BELOW 704 PIXELS (Small Tablets) */
+    @media (max-width: 44em) {
+      font-size: 3.4rem;
+    }
+
+    /* BELOW 544 PIXELS (Phones) */
+    @media (max-width: 34em) {
+      font-size: 2.6rem;
+    }
   }
 
   & span {
@@ -39,6 +64,16 @@ const TextBox = styled.div`
 
     & span {
       font-size: 1.8rem;
+
+      /* BELOW 704 PIXELS (Small Tablets) */
+      @media (max-width: 44em) {
+        font-size: 2.6rem;
+      }
+
+      /* BELOW 544 PIXELS (Phones) */
+      @media (max-width: 34em) {
+        font-size: 2rem;
+      }
     }
 
     & svg {
@@ -47,6 +82,18 @@ const TextBox = styled.div`
       background-color: var(--color-yellow);
       border-radius: 50%;
       color: var(--color-grey-light);
+
+      /* BELOW 704 PIXELS (Small Tablets) */
+      @media (max-width: 44em) {
+        width: 2.6rem;
+        height: 2.6rem;
+      }
+
+      /* BELOW 544 PIXELS (Phones) */
+      @media (max-width: 34em) {
+        width: 1.8rem;
+        height: 1.8rem;
+      }
     }
   }
 `;

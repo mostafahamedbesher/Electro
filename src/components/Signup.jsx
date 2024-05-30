@@ -13,6 +13,33 @@ const StyledSignup = styled.div`
   & span {
     font-size: 1.5rem;
     font-weight: 300;
+
+    /* BELOW 960 PIXELS (Tablets) */
+    @media (max-width: 60em) {
+      font-size: 1.4rem;
+    }
+
+    /* BELOW 704 PIXELS (Small Tablets) */
+    @media (max-width: 44em) {
+      font-size: 1.8rem;
+    }
+  }
+
+  /* BELOW 1200 PIXELS (landscape Tablets) */
+  @media (max-width: 75em) {
+    padding: 0 var(--padding-section-sm);
+  }
+
+  /* BELOW 704 PIXELS (Small Tablets) */
+  @media (max-width: 44em) {
+    flex-wrap: wrap;
+    height: 14rem;
+  }
+
+  /* BELOW 544 PIXELS (Phones) */
+  @media (max-width: 34em) {
+    justify-content: center;
+    height: 15rem;
   }
 `;
 
@@ -31,6 +58,16 @@ const Box = styled.div`
   & p {
     font-size: 2.2rem;
     font-weight: 400;
+
+    /* BELOW 960 PIXELS (Tablets) */
+    @media (max-width: 60em) {
+      font-size: 1.7rem;
+    }
+
+    /* BELOW 704 PIXELS (Small Tablets) */
+    @media (max-width: 44em) {
+      font-size: 2.2rem;
+    }
   }
 `;
 
@@ -46,13 +83,29 @@ const Input = styled.input`
   &:focus {
     outline: 2px solid var(--color-yellow);
   }
+
+  /* BELOW 960 PIXELS (Tablets) */
+  @media (max-width: 60em) {
+    width: 38rem;
+  }
+
+  /* BELOW 704 PIXELS (Small Tablets) */
+  @media (max-width: 44em) {
+    width: 69rem;
+    font-size: 1.6rem;
+  }
+
+  /* BELOW 544 PIXELS (Phones) */
+  @media (max-width: 34em) {
+    width: 40rem;
+  }
 `;
 
 const InputLabel = styled.div`
   position: absolute;
   top: 0;
   right: 0;
-  height: 100%;
+  /* height: 100%; */
   background-color: var(--color-grey-dark);
   padding: 1.4rem 2.8rem;
   border-top-right-radius: 50rem;
@@ -65,11 +118,24 @@ const InputLabel = styled.div`
     color: var(--color-white);
     font-size: 1.4rem;
     font-weight: 400;
+
+    /* BELOW 704 PIXELS (Small Tablets) */
+    @media (max-width: 44em) {
+      font-size: 1.6rem;
+    }
+  }
+
+  /* BELOW 960 PIXELS (Tablets) */
+  @media (max-width: 60em) {
+    padding: 1.4rem 2.4rem;
   }
 `;
 
 const InputBox = styled.div`
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 function Signup() {
@@ -79,9 +145,11 @@ function Signup() {
         <HiOutlinePaperAirplane />
         <p>Sign Up to Newsletter</p>
       </Box>
+
       <span>
         ...and recieve <strong>$20 coupon for first shopping</strong>
       </span>
+
       <InputBox>
         <Input type="text" placeholder="Enter your email address" />
         <InputLabel>

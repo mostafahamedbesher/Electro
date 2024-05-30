@@ -4,6 +4,11 @@ import CatogeriesItemLink from "./CatogeriesItemLink";
 
 const StyledCatogeriesList = styled.ul`
   padding: 1rem 1.6rem;
+
+  /* BELOW 704 PIXELS (Small Tablets) */
+  @media (max-width: 44em) {
+    overflow: scroll;
+  }
 `;
 
 function CatogeriesList() {

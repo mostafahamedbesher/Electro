@@ -44,6 +44,11 @@ const StyledProductsList = styled.ul`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   row-gap: 2rem;
+
+  /* BELOW 704 PIXELS (Small Tablets) */
+  @media (max-width: 44em) {
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 function ProductsList() {

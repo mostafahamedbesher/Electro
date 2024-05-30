@@ -20,6 +20,13 @@ const StyledCategoeryItem = styled.li`
     background-color: var(--color-zinc-200);
   }
 
+  /* BELOW 704 PIXELS (Small Tablets) */
+  @media (max-width: 44em) {
+    padding: 1.8rem 1rem;
+    font-size: 1.7rem;
+    font-weight: 400;
+  }
+
   & span svg {
     color: #a1a1aa;
   }

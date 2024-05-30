@@ -5,7 +5,7 @@ import HeroImgBox from "./HeroImgBox";
 const StyledHeroContent = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  justify-content: center;
+  justify-items: center;
   align-items: center;
 `;
 

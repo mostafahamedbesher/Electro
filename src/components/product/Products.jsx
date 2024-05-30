@@ -12,6 +12,16 @@ const StyledProducts = styled.section`
   padding: 0 var(--padding-section);
   padding-bottom: 5rem;
   align-items: start;
+
+  /* BELOW 1200 PIXELS (landscape Tablets) */
+  @media (max-width: 75em) {
+    padding: 0 var(--padding-section-sm);
+  }
+
+  /* BELOW 704 PIXELS (Small Tablets) */
+  @media (max-width: 44em) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 function Products() {

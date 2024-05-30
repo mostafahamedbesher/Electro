@@ -13,6 +13,11 @@ const StyledRecentlyViewed = styled.section`
 
 const RecentlyViewedContainer = styled.div`
   padding: 0 var(--padding-section);
+
+  /* BELOW 1200 PIXELS (landscape Tablets) */
+  @media (max-width: 75em) {
+    padding: 0 var(--padding-section-sm);
+  }
 `;
 
 const IconsBox = styled.div`

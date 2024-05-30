@@ -5,7 +5,13 @@ const StyledSectionHeader = styled.header`
   align-items: center;
   justify-content: space-between;
   border-bottom: 3px solid var(--color-zinc-200);
-  /* padding: 1rem 0; */
+
+  /* BELOW 704 PIXELS (Small Tablets) */
+  @media (max-width: 44em) {
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
 `;
 
 const HeadingText = styled.h3`
@@ -23,6 +29,17 @@ const HeadingText = styled.h3`
     left: 0;
     transform: translate(0, 80%);
     background-color: var(--color-yellow);
+  }
+
+  /* BELOW 960 PIXELS (Tablets) */
+  @media (max-width: 60em) {
+    font-size: 2.4rem;
+  }
+
+  /* BELOW 704 PIXELS (Small Tablets) */
+  @media (max-width: 44em) {
+    font-size: 2.2rem;
+    margin-right: 1rem;
   }
 `;
 

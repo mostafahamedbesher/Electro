@@ -10,6 +10,16 @@ const StyledBestseller = styled.section`
 
 const BestsellerContainer = styled.div`
   padding: 0 var(--padding-section);
+
+  /* BELOW 1200 PIXELS (landscape Tablets) */
+  @media (max-width: 75em) {
+    padding: 0 var(--padding-section-sm);
+  }
+
+  /* BELOW 544 PIXELS (Phones) */
+  @media (max-width: 34em) {
+    padding: 0 2rem;
+  }
 `;
 
 const BannerBox = styled.div`
@@ -19,13 +29,18 @@ const BannerBox = styled.div`
 const BannerImg = styled.img`
   width: 100%;
   height: 20rem;
+
+  /* BELOW 544 PIXELS (Phones) */
+  @media (max-width: 34em) {
+    display: none;
+  }
 `;
 
 function Bestseller() {
   return (
     <StyledBestseller>
       <BestsellerContainer>
-        <SectionHeader headingTxt="BestSellers">
+        <SectionHeader headingTxt="Best Sellers">
           <Filter
             filterLabels={[
               "Open 20",
@@ -35,10 +50,14 @@ function Bestseller() {
             ]}
             hasBorder={false}
             borderType="round"
+            horizantalAlign="start"
           />
         </SectionHeader>
+
         <BestsellerList />
+
         <Slider dotsNum={4} horizontalAlign="center" />
+
         <BannerBox>
           <BannerImg
             src="./images/bestseller-banner.png"

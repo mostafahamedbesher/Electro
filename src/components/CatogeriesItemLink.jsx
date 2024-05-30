@@ -10,6 +10,13 @@ const StyledItemLink = styled.a`
     font-size: 1.5rem;
     font-weight: 700;
     cursor: pointer;
+
+    /* BELOW 704 PIXELS (Small Tablets) */
+    @media (max-width: 44em) {
+      padding: 1.8rem 1rem;
+      font-size: 1.7rem;
+      font-weight: 400;
+    }
   }
 
   &:hover,

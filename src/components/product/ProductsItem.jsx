@@ -74,6 +74,7 @@ function ProductsItem({ product, hasIconTxt = false, offerPrice = "" }) {
             )}
             <ProductPriceEl offerPrice={offerPrice}>{price}</ProductPriceEl>
           </ProductPriceBox>
+
           <ProductIcon
             isHovered={isHovered}
             hasIconTxt={hasIconTxt}

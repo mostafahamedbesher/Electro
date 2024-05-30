@@ -12,12 +12,27 @@ const StyledInfo = styled.div`
   justify-content: space-between;
   border-bottom: 1px solid #c3cbcf;
   padding: 0 var(--padding-section);
+
+  /* BELOW 1200 PIXELS (landscape Tablets) */
+  @media (max-width: 75em) {
+    padding: 0 var(--padding-section-sm);
+  }
+
+  /* BELOW 704 PIXELS (Small Tablets) */
+  @media (max-width: 44em) {
+    display: none;
+  }
 `;
 
 const InfoItemContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 2.2rem;
+
+  /* BELOW 960 PIXELS (Tablets) */
+  @media (max-width: 60em) {
+    gap: 1.6rem;
+  }
 `;
 
 function Info() {

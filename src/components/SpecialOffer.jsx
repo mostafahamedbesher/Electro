@@ -18,6 +18,11 @@ const StyledTxtBox = styled.div`
     font-size: 2rem;
     display: flex;
     flex-direction: column;
+
+    /* BELOW 704 PIXELS (Small Tablets) */
+    @media (max-width: 44em) {
+      font-size: 2.6rem;
+    }
   }
 
   & div {
@@ -29,6 +34,11 @@ const StyledTxtBox = styled.div`
     flex-direction: column;
     align-items: center;
     border-radius: 9px;
+
+    /* BELOW 704 PIXELS (Small Tablets) */
+    @media (max-width: 44em) {
+      font-size: 2rem;
+    }
   }
 `;
 
@@ -48,6 +58,11 @@ const ProductName = styled.p`
   font-weight: 500;
   color: var(--color-blue);
   margin-bottom: 2rem;
+
+  /* BELOW 704 PIXELS (Small Tablets) */
+  @media (max-width: 44em) {
+    font-size: 2.4rem;
+  }
 `;
 
 const PriceOld = styled.span`
@@ -55,12 +70,22 @@ const PriceOld = styled.span`
   font-weight: 300;
   text-decoration: line-through;
   color: var(--color-grey-dark);
+
+  /* BELOW 704 PIXELS (Small Tablets) */
+  @media (max-width: 44em) {
+    font-size: 2.2rem;
+  }
 `;
 
 const PriceNew = styled.span`
   font-weight: 400;
   font-size: 2.6rem;
   color: var(--color-red-600);
+
+  /* BELOW 704 PIXELS (Small Tablets) */
+  @media (max-width: 44em) {
+    font-size: 3rem;
+  }
 `;
 
 const PriceBox = styled.div`

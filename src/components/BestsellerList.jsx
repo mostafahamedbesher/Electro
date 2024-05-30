@@ -49,6 +49,16 @@ const StyledBestsellerList = styled.ul`
   margin-top: 5rem;
   margin-bottom: 2rem;
   row-gap: 4rem;
+
+  /* BELOW 960 PIXELS (Tablets) */
+  @media (max-width: 60em) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* BELOW 544 PIXELS (Phones) */
+  @media (max-width: 34em) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 function BestsellerList() {

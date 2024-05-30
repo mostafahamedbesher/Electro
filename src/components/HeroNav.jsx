@@ -5,15 +5,30 @@ const StyledHeroNav = styled.nav`
     display: flex;
     align-items: center;
     gap: 2.4rem;
-  }
 
-  & ul li {
-    font-size: 1.5rem;
-    font-weight: 700;
+    li {
+      font-size: 1.5rem;
+      font-weight: 700;
 
-    a:link,
-    a:visited {
-      color: var(--color-zinc-700);
+      /* BELOW 960 PIXELS (Tablets) */
+      @media (max-width: 60em) {
+        font-size: 1.4rem;
+      }
+
+      /* BELOW 704 PIXELS (Small Tablets) */
+      @media (max-width: 44em) {
+        font-size: 1.6rem;
+      }
+
+      a:link,
+      a:visited {
+        color: var(--color-zinc-700);
+      }
+    }
+
+    /* BELOW 960 PIXELS (Tablets) */
+    @media (max-width: 60em) {
+      gap: 1.5rem;
     }
   }
 `;

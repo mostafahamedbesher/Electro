@@ -9,8 +9,15 @@ const StyledFilter = styled.ul`
   gap: 2.4rem;
   border-bottom: ${(props) =>
     props.hasBorder ? "2px solid var(--color-zinc-200)" : "none"};
+
   margin-bottom: ${(props) => (props.borderType === "round" ? "0" : "1rem")};
   padding: 0 1.6rem;
+
+  /* BELOW 704 PIXELS (Small Tablets) */
+  @media (max-width: 44em) {
+    overflow-x: scroll;
+    gap: 3rem;
+  }
 `;
 
 function Filter({

@@ -13,6 +13,11 @@ const StyledTimer = styled.div`
     font-size: 1.6rem;
     font-weight: 400;
     color: var(--color-grey-dark);
+
+    /* BELOW 704 PIXELS (Small Tablets) */
+    @media (max-width: 44em) {
+      font-size: 2rem;
+    }
   }
 `;
 
@@ -38,12 +43,32 @@ const TimeUnit = styled.div`
     padding: 1rem;
     margin-bottom: 0.5rem;
     border-radius: 4px;
+
+    /* BELOW 704 PIXELS (Small Tablets) */
+    @media (max-width: 44em) {
+      font-size: 3.6rem;
+    }
+
+    /* BELOW 544 PIXELS (Phones) */
+    @media (max-width: 34em) {
+      font-size: 3.2rem;
+    }
   }
 
   & p {
     font-size: 1.2rem;
     font-weight: 300;
     text-transform: uppercase;
+
+    /* BELOW 704 PIXELS (Small Tablets) */
+    @media (max-width: 44em) {
+      font-size: 2.2rem;
+    }
+
+    /* BELOW 544 PIXELS (Phones) */
+    @media (max-width: 34em) {
+      font-size: 2rem;
+    }
   }
 `;
 

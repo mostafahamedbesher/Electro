@@ -8,6 +8,31 @@ const StyledHeroMenu = styled.div`
   border-radius: 10px;
   background-color: var(--color-grey-light);
   z-index: 100;
+
+  /* BELOW 704 PIXELS (Small Tablets) */
+  @media (max-width: 44em) {
+    z-index: 9999;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40%;
+    border-radius: 0;
+    transform: translateX(-300px);
+    transition: all 0.3s ease-in;
+
+    ${(props) =>
+      !props.isOpenMenu
+        ? `opacity: 0;
+     pointer-events: none;
+     visibility: hidden;`
+        : `transform: translateX(0);`}
+
+    /* BELOW 544 PIXELS (Phones) */
+  @media (max-width: 34em) {
+      width: 55%;
+    }
+  }
 `;
 
 const MenuHeader = styled.div`
@@ -27,11 +52,16 @@ const MenuHeader = styled.div`
     height: 2.4rem;
     font-weight: 500;
   }
+
+  /* BELOW 704 PIXELS (Small Tablets) */
+  @media (max-width: 44em) {
+    display: none;
+  }
 `;
 
-function HeroMenu() {
+function HeroMenu({ isOpenMenu }) {
   return (
-    <StyledHeroMenu>
+    <StyledHeroMenu isOpenMenu={isOpenMenu}>
       <MenuHeader>
         <span>
           <HiListBullet />

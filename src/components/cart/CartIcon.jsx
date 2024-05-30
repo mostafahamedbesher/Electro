@@ -19,6 +19,12 @@ const StyledCartIcon = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    /* BELOW 704 PIXELS (Small Tablets) */
+    @media (max-width: 44em) {
+      background-color: var(--color-grey-dark);
+      color: var(--color-white);
+    }
   }
 `;
 

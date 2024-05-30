@@ -12,6 +12,11 @@ const StyledInfoItem = styled.div`
     font-weight: 500;
     color: var(--color-grey-dark);
     transition: all 0.3s;
+
+    /* BELOW 960 PIXELS (Tablets) */
+    @media (max-width: 60em) {
+      font-size: 1.2rem;
+    }
   }
 
   & a:hover,

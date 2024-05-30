@@ -10,6 +10,10 @@ function reducer(state, action) {
       return { ...state, cart: [...state.cart, action.payload] };
     }
 
+    case "cart/clear": {
+      return { ...state, cart: intialState.cart };
+    }
+
     default:
       throw new Error("Unknown action type");
   }
